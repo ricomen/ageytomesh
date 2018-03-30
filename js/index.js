@@ -9,7 +9,6 @@ webpackJsonp_name_([1],[
 
 "use strict";
 
-// import './svg.min';
 
 var _animateBtns = __webpack_require__(5);
 
@@ -124,7 +123,6 @@ function StickyBtns(prop) {
 
 
 if (!Element.prototype.matches) {
-
     Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
 }
 

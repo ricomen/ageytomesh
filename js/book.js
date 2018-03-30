@@ -6785,7 +6785,6 @@ var bookSlider = new _swiper2.default('.book__slider-wrap', {
   breakpoints: {
     992: {
       slidesPerView: 2,
-      spaceBetween: 2,
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
@@ -6793,7 +6792,6 @@ var bookSlider = new _swiper2.default('.book__slider-wrap', {
       }
     },
     576: {
-      slidesPerView: 2,
       spaceBetween: 2
     }
   }

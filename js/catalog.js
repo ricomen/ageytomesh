@@ -25,7 +25,6 @@ exports.default = filterToggle;
 
 "use strict";
 
-// import './svg.min';
 
 __webpack_require__(1);
 
