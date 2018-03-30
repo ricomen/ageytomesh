@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>AgeyTomesh</title><!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link rel="stylesheet" href="css/style.css">
+    <body>
+      <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+        <symbol id="icon-fb-white" viewbox="0 0 30 30">
+          <path fill="#fff" fill-rule="evenodd" d="M17.14 25V14.965h3.243l.486-3.911h-3.73V8.557c0-1.132.304-1.904 1.867-1.904L21 6.652V3.154C20.655 3.107 19.471 3 18.094 3c-2.874 0-4.843 1.823-4.843 5.17v2.884H10v3.91h3.251V25h3.889z"></path>
+        </symbol>
+        <symbol id="icon-fb" viewbox="0 0 30 30">
+          <path fill="#be1823" fill-rule="evenodd" d="M17.14 25V14.965h3.243l.486-3.911h-3.73V8.557c0-1.132.304-1.904 1.867-1.904L21 6.652V3.154C20.655 3.107 19.471 3 18.094 3c-2.874 0-4.843 1.823-4.843 5.17v2.884H10v3.91h3.251V25h3.889z"></path>
+        </symbol>
+        <symbol id="icon-inst-white" viewbox="0 0 30 30">
+          <path fill="#fff" fill-rule="evenodd" d="M10.583 6.057C11.596 6.011 11.92 6 14.5 6s2.904.01 3.917.057c1.011.046 1.702.207 2.306.442a4.657 4.657 0 0 1 1.682 1.096 4.657 4.657 0 0 1 1.096 1.682c.235.604.396 1.295.442 2.306.046 1.013.057 1.337.057 3.917s-.01 2.904-.057 3.917c-.046 1.011-.207 1.702-.442 2.306a4.657 4.657 0 0 1-1.096 1.683 4.657 4.657 0 0 1-1.682 1.095c-.604.235-1.295.396-2.306.442-1.013.046-1.337.057-3.917.057s-2.904-.01-3.917-.057c-1.011-.046-1.702-.207-2.306-.442a4.657 4.657 0 0 1-1.683-1.095A4.657 4.657 0 0 1 5.5 21.723c-.235-.604-.396-1.295-.442-2.306C5.011 18.404 5 18.08 5 15.5s.01-2.904.057-3.917c.046-1.011.207-1.702.442-2.306a4.657 4.657 0 0 1 1.095-1.682 4.657 4.657 0 0 1 1.683-1.096c.604-.235 1.295-.396 2.306-.442zM14.5 10.75a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5zm-2.85 4.75a2.85 2.85 0 1 1 5.7 0 2.85 2.85 0 0 1-5.7 0zm8.55-4.75a.95.95 0 1 0 0-1.9.95.95 0 0 0 0 1.9z"></path>
+        </symbol>
+        <symbol id="icon-inst" viewbox="0 0 30 30">
+          <path fill="#be1823" fill-rule="evenodd" d="M10.583 6.057C11.596 6.011 11.92 6 14.5 6s2.904.01 3.917.057c1.011.046 1.702.207 2.306.442a4.657 4.657 0 0 1 1.682 1.096 4.657 4.657 0 0 1 1.096 1.682c.235.604.396 1.295.442 2.306.046 1.013.057 1.337.057 3.917s-.01 2.904-.057 3.917c-.046 1.011-.207 1.702-.442 2.306a4.657 4.657 0 0 1-1.096 1.683 4.657 4.657 0 0 1-1.682 1.095c-.604.235-1.295.396-2.306.442-1.013.046-1.337.057-3.917.057s-2.904-.01-3.917-.057c-1.011-.046-1.702-.207-2.306-.442a4.657 4.657 0 0 1-1.683-1.095A4.657 4.657 0 0 1 5.5 21.723c-.235-.604-.396-1.295-.442-2.306C5.011 18.404 5 18.08 5 15.5s.01-2.904.057-3.917c.046-1.011.207-1.702.442-2.306a4.657 4.657 0 0 1 1.095-1.682 4.657 4.657 0 0 1 1.683-1.096c.604-.235 1.295-.396 2.306-.442zM14.5 10.75a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5zm-2.85 4.75a2.85 2.85 0 1 1 5.7 0 2.85 2.85 0 0 1-5.7 0zm8.55-4.75a.95.95 0 1 0 0-1.9.95.95 0 0 0 0 1.9z"></path>
+        </symbol>
+        <symbol id="icon-search-white" viewbox="0 0 16 16">
+          <path fill="#fff" d="M15.7 14.3l-4.2-4.2c-.2-.2-.5-.3-.8-.3.8-1 1.3-2.4 1.3-3.8 0-3.3-2.7-6-6-6S0 2.7 0 6s2.7 6 6 6c1.4 0 2.8-.5 3.8-1.4 0 .3 0 .6.3.8l4.2 4.2c.2.2.5.3.7.3s.5-.1.7-.3c.4-.3.4-.9 0-1.3zM6 10.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z"></path>
+        </symbol>
+        <symbol id="icon-search" viewbox="0 0 16 16">
+          <path fill="#be1823" d="M15.7 14.3l-4.2-4.2c-.2-.2-.5-.3-.8-.3.8-1 1.3-2.4 1.3-3.8 0-3.3-2.7-6-6-6S0 2.7 0 6s2.7 6 6 6c1.4 0 2.8-.5 3.8-1.4 0 .3 0 .6.3.8l4.2 4.2c.2.2.5.3.7.3s.5-.1.7-.3c.4-.3.4-.9 0-1.3zM6 10.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z"></path>
+        </symbol>
+        <symbol id="icon-vk-white" viewbox="0 0 30 30">
+          <path fill="#fff" fill-rule="evenodd" d="M26.45 8.948c.166-.546 0-.948-.795-.948H23.03c-.668 0-.976.347-1.143.73 0 0-1.335 3.196-3.226 5.272-.612.602-.89.793-1.224.793-.167 0-.409-.191-.409-.738v-5.11c0-.655-.193-.947-.75-.947h-4.126c-.417 0-.668.304-.668.593 0 .621.946.765 1.043 2.513v3.798c0 .833-.153.984-.487.984-.89 0-3.055-3.211-4.339-6.885C7.449 8.288 7.197 8 6.526 8H3.9c-.75 0-.9.347-.9.73 0 .682.89 4.07 4.145 8.551C9.315 20.341 12.37 22 15.153 22c1.669 0 1.875-.368 1.875-1.003v-2.313c0-.737.158-.884.687-.884.39 0 1.057.192 2.615 1.667C22.11 21.216 22.403 22 23.405 22h2.625c.75 0 1.126-.368.91-1.096-.237-.724-1.088-1.775-2.215-3.022-.612-.71-1.53-1.475-1.808-1.858-.39-.491-.279-.71 0-1.147 0 0 3.199-4.426 3.532-5.93"></path>
+        </symbol>
+        <symbol id="icon-vk" viewbox="0 0 30 30">
+          <path fill="#be1823" fill-rule="evenodd" d="M26.45 8.948c.166-.546 0-.948-.795-.948H23.03c-.668 0-.976.347-1.143.73 0 0-1.335 3.196-3.226 5.272-.612.602-.89.793-1.224.793-.167 0-.409-.191-.409-.738v-5.11c0-.655-.193-.947-.75-.947h-4.126c-.417 0-.668.304-.668.593 0 .621.946.765 1.043 2.513v3.798c0 .833-.153.984-.487.984-.89 0-3.055-3.211-4.339-6.885C7.449 8.288 7.197 8 6.526 8H3.9c-.75 0-.9.347-.9.73 0 .682.89 4.07 4.145 8.551C9.315 20.341 12.37 22 15.153 22c1.669 0 1.875-.368 1.875-1.003v-2.313c0-.737.158-.884.687-.884.39 0 1.057.192 2.615 1.667C22.11 21.216 22.403 22 23.405 22h2.625c.75 0 1.126-.368.91-1.096-.237-.724-1.088-1.775-2.215-3.022-.612-.71-1.53-1.475-1.808-1.858-.39-.491-.279-.71 0-1.147 0 0 3.199-4.426 3.532-5.93">  </path>
+        </symbol>
+      </svg>
+      <header class="header">
+        <div class="container">
+          <div class="header__inner"><a class="header__logo" href="/"><img src="img/static/logo-1.svg" alt="Agey Tomesh Wam"><img src="img/static/logo-3.svg" alt="HSE ART BOOKS"></a>
+            <div class="header__nav">
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item"><a href="/" title="Каталог">каталог</a></li>
+                  <li class="nav__item"><a href="/" title="Как мы работаем">как мы работаем</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__right">
+              <div class="header__right-item">
+                <div class="header__social">
+                  <div class="social">
+                    <ul class="social__list">
+                      <li class="social__item"><a href="#">Faceebok
+                          <svg class="icon-fb " width="30" height="30">
+                            <use xlink:href="#icon-fb"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a href="#">Vkontakte
+                          <svg class="icon-vk " width="30" height="30">
+                            <use xlink:href="#icon-vk"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a href="#">Instagram
+                          <svg class="icon-inst " width="30" height="30">
+                            <use xlink:href="#icon-inst"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="header__right-item">
+                <div class="header__search"> 
+                  <div class="search">
+                    <input class="search__field">
+                    <button class="search__btn btn btn--search" type="button">
+                      <svg class="icon-search " width="17.5" height="17.5">
+                        <use xlink:href="#icon-search"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="header__img"><img src="img/static/vert-logo.svg" width="67" alt="HSE ART BOOKS"></div>
+              </div>
+            </div>
+            <div class="header__contacts">
+              <address class="contacts"><a class="contacts__link" href="javascript:void(0)">москва,<br> м. дмитровка, 24/2</a><a class="contacts__link" href="tel:+74959136295">+&nbsp;7&nbsp;(495)&nbsp;913&nbsp;62&nbsp;95</a><a class="contacts__link" href="tel:+7495913629">+&nbsp;7&nbsp;(495)&nbsp;913&nbsp;62&nbsp;9</a></address>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="hero" style="background-image: url(img/content/hero-bg.png);">
+        <div class="container">
+          <div class="hero__inner">
+            <div class="hero__text">
+              <p>Партнерский проект, объединяющий ресурсы и&nbsp;достижения Издательской группы Agey Tomesh&nbsp;/ Книги WAM и&nbsp;Школы дизайна НИУ ВШЭ: общая команда, общие правила, общие традиции.</p>
+              <p>Мы&nbsp;издаем книги, каждая из&nbsp;которых&nbsp;&mdash; событие, предмет коллекционирования, вклад в&nbsp;историю, произведение книжного искусства, созданное в&nbsp;сотрудничестве с&nbsp;заказчиком&nbsp;&mdash; и&nbsp;специально для него.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="create">
+        <div class="container">
+          <div class="create__inner" data-sticky-btn data-indent="52">
+            <header class="create__top">
+              <div class="heading">
+                <div class="heading__content">
+                  <div class="heading__title">Создаём</div>
+                  <div class="heading__subtitle">специально для вас</div>
+                </div>
+                <div class="heading__right"><a class="btn" href="#create" data-anchor="create" data-sticky>первый шаг к вашей книге</a></div>
+              </div>
+            </header>
+            <div class="create__row row">
+              <div class="create__item col-md-3">
+                <p>тематические издания, подарочные альбомы, иллюстрированные хроники, каталоги</p>
+              </div>
+              <div class="create__item col-md-3">
+                <p>иллюстрированные исторические издания, биографии, книги и&nbsp;альбомы по&nbsp;искусству;</p>
+              </div>
+              <div class="create__item col-md-3">
+                <p>подарочные научно-популярные издания, эксклюзивные книги-исследования, иллюстрированные шедевры детской и&nbsp;взрослой литературы, книжные серии;</p>
+              </div>
+              <div class="create__item col-md-3">
+                <p>юбилейные корпоративные и&nbsp;отраслевые издания.</p>
+              </div>
+            </div>
+            <footer class="create__bottom"><a class="btn btn--block" href="#create" data-anchor="create">первый шаг к вашей книге</a></footer>
+          </div>
+        </div>
+      </section>
+      <section class="new-books">
+        <div class="container">
+          <div class="new-books__inner">
+            <div class="new-books__item" data-sticky-btn data-indent="323">
+              <header class="new-books__header">
+                <div class="heading">
+                  <div class="heading__content">
+                    <div class="heading__title">Новые книги</div>
+                    <div class="heading__subtitle">издано в&nbsp;2017 году</div>
+                  </div>
+                </div>
+              </header>
+              <article class="book-description">
+                <div class="book-description__top">
+                  <div class="book-description__cover"><img src="img/content/football.jpg" alt="Футбол Чемпионаты мира"></div>
+                  <div class="book-description__content">
+                    <h2 class="book-description__title">Футбол. Чемпионаты мира. 1930&ndash;2014</h2>
+                    <div class="book-description__descr">
+                      <p>Турниры лучших сборных планеты похожи на&nbsp;сериал, эпизоды которого выходят раз в&nbsp;четыре года. Никто не&nbsp;знает, чем всё завершится, герои кочуют из&nbsp;одной серии в&nbsp;другую. Но&nbsp;каждый из&nbsp;них вносит вклад в&nbsp;создание особой, неповторимой атмосферы турнира. Её-то мы&nbsp;и&nbsp;постарались воссоздать, вспомнив при этом не&nbsp;только знаменитостей, но&nbsp;и&nbsp;полузабытых участников футбольного шоу.</p>
+                      <p>Издание подготовлено и&nbsp;осуществлено по&nbsp;инициативе Группы Интеррос.</p>
+                    </div>
+                    <div class="book-description__descr-bottom">
+                      <div class="book-description__descr-logo"><img src="img/content/interros.jpg" width="160" alt="Интерос"></div>
+                    </div>
+                  </div>
+                  <div class="book-description__button"><a class="btn btn--block" href="javascript: void(0)" data-sticky>каталог</a></div>
+                </div>
+                <div class="book-description__bottom row">
+                  <div class="book-description__bottom-item col-md-3">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title">7</div>
+                          <div class="heading__subtitle">месяцев</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info-block__content">
+                      <p>прошло от&nbsp;первоначального замысла до&nbsp;получения тиража книги </p>
+                    </div>
+                  </div>
+                  <div class="book-description__bottom-item col-md-3">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title">45</div>
+                          <div class="heading__subtitle">портретов игроков</div>
+                        </div>
+                      </div>
+                      <div class="info-block__content">
+                        <p>были нарисованы для книги художником Евгением Тонконогим</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="book-description__bottom-item col-md-3">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title"> 100</div>
+                          <div class="heading__subtitle">часов</div>
+                        </div>
+                      </div>
+                      <div class="info-block__content">
+                        <p>видеотрансляций матчей изучили авторы текстов</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="book-description__bottom-item col-md-3">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title"> 4000</div>
+                          <div class="heading__subtitle">фотографий</div>
+                        </div>
+                      </div>
+                      <div class="info-block__content">
+                        <p>от&nbsp;ведущих фотобанков и&nbsp;фотоагентств было просмотрено редактором</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="new-books__item" data-sticky-btn data-indent="148">
+              <article class="book-description">
+                <div class="book-description__top book-description__top--reverse">
+                  <div class="book-description__cover"><img src="img/content/russia.jpg" alt="Футбол Чемпионаты мира"></div>
+                  <div class="book-description__content">
+                    <h2 class="book-description__title">Россия. XX&nbsp;век</h2>
+                    <div class="book-description__descr">
+                      <p>Издательский коллектив поставил перед собой амбициозную задачу: передать в&nbsp;одной книге события русской истории в&nbsp;невероятно бурном веке, начавшегося с&nbsp;разработки проекта памятника Гоголю в&nbsp;Москве и&nbsp;завершившегося принятием Государственной думой символики и&nbsp;гимна независимой России. Воссоздать целостную и&nbsp;объективную картину прошлого удалось с&nbsp;помощью специально отобранных выдержек из&nbsp;газет и&nbsp;журналов минувшего столетия. Тексты сопровождает иллюстративный ряд, неожиданный и&nbsp;яркий, материалы для которого нашлись в&nbsp;музейных запасниках и&nbsp;картинных галереях.</p>
+                      <p>Издание подготовлено в&nbsp;рамках программы &laquo;Культурный прорыв&raquo; Благотворительного фонда Владимира Потанина.</p>
+                    </div>
+                    <div class="book-description__descr-bottom">
+                      <div class="book-description__descr-logo"><img src="img/content/fond.jpg" width="277" height="111" alt="Интерос"></div>
+                    </div>
+                  </div>
+                  <div class="book-description__button"><a class="btn btn--block" href="javascript: void(0)" data-sticky>каталог</a></div>
+                </div>
+                <div class="book-description__bottom row">
+                  <div class="book-description__bottom-item col-md-4">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title">События</div>
+                          <div class="heading__subtitle">разного масштаба</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info-block__content">
+                      <p>от&nbsp;достижений советских кондитеров до&nbsp;полета Гагарина в&nbsp;космос</p>
+                    </div>
+                  </div>
+                  <div class="book-description__bottom-item col-md-4">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title">Пресса</div>
+                          <div class="heading__subtitle">X&nbsp;века</div>
+                        </div>
+                      </div>
+                      <div class="info-block__content">
+                        <p>от&nbsp;достижений советских кондитеров до&nbsp;полета Гагарина в&nbsp;космос</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="book-description__bottom-item col-md-4">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title" style="letter-spacing: 0.25px;"> Визуальная</div>
+                          <div class="heading__subtitle">культура</div>
+                        </div>
+                      </div>
+                      <div class="info-block__content">
+                        <p>картины, денежные купюры, кадры из&nbsp;фильмов, плакаты и&nbsp;этикетки</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="new-books__item" data-sticky-btn data-indent="141">
+              <article class="book-description">
+                <div class="book-description__top">
+                  <div class="book-description__cover"><img src="img/content/iron-logic.jpg" alt="Футбол Чемпионаты мира"></div>
+                  <div class="book-description__content">
+                    <h2 class="book-description__title">Железная логика России</h2>
+                    <div class="book-description__descr">
+                      <p>Металл&nbsp;&mdash; основа цивилизации, то, без чего невозможна ни&nbsp;общественная, ни&nbsp;частная жизнь. История отечественной металлургии, в&nbsp;частности, заводов, входящих в&nbsp;ОМК, неразрывно связана с&nbsp;историей страны. Книга &laquo;Железная логика России&raquo;&nbsp;&mdash; историко-журналистская хроника, иллюстрированная сотнями редких фотографий, документов, картин. Она охватывает период с&nbsp;1756-го по&nbsp;2017&nbsp;г. Здесь металлургия и&nbsp;история заводов, входящих в&nbsp;ОМК,&nbsp;&mdash; часть важнейших исторических и&nbsp;культурных процессов в&nbsp;стране. Книга одновременно издана на&nbsp;русском и&nbsp;на&nbsp;английском языке.</p>
+                      <p>Проект приурочен к&nbsp;юбилею Объединенной металлургической компании и&nbsp;Выксунского металлургического завода.</p>
+                    </div>
+                    <div class="book-description__descr-bottom">
+                      <div class="book-description__descr-logo"><img src="img/content/metall-company.jpg" width="107" height="111" alt="Объединенная Металлургическая Компания"></div>
+                    </div>
+                  </div>
+                  <div class="book-description__button"><a class="btn btn--block" href="javascript: void(0)" data-sticky>каталог</a></div>
+                </div>
+                <div class="book-description__bottom row">
+                  <div class="book-description__bottom-item" style="width: 12.333%; float: left;padding-left: 15px;">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title">510</div>
+                          <div class="heading__subtitle">статей</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="book-description__bottom-item" style="width: 15.2%;float: left;">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title">1035</div>
+                          <div class="heading__subtitle">иллюстраций </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="book-description__bottom-item" style="width: 18.2%;float: left;">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title">4</div>
+                          <div class="heading__subtitle">фоторедактора</div>
+                        </div>
+                      </div>
+                      <div class="info-block__content">
+                        <p>подбирали иллюстративный материал</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="book-description__bottom-item" style="width: 21%;float: left;">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title"> 5</div>
+                          <div class="heading__subtitle">городов Росии</div>
+                        </div>
+                      </div>
+                      <div class="info-block__content">
+                        <p>устраивали выставку &laquo;Железная логика России&raquo; по&nbsp;случаю выхода книги</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="book-description__bottom-item" style="width: 31.2%;float: left;">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title"> В&nbsp;обложку</div>
+                          <div class="heading__subtitle">вмонтирована металлическая пластина,</div>
+                        </div>
+                      </div>
+                      <div class="info-block__content">
+                        <p>украшенная лазерной гравировкой</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="how-work">
+        <div class="container">
+          <div class="how-work__inner" data-sticky-btn data-indent="62">
+            <header class="how-work__header">
+              <div class="heading">
+                <div class="heading__content">
+                  <h2 class="heading__title">Как</h2>
+                  <div class="heading__subtitle">мы&nbsp;работаем</div>
+                </div>
+                <div class="heading__right"><a class="btn" href="#create" data-anchor="create" data-sticky>первый шаг к&nbsp;вашей книге</a></div>
+              </div>
+            </header>
+            <div class="how-work__row row">
+              <div class="how-work__item col-md-4">
+                <div class="heading heading--grey">
+                  <h3 class="heading__title">1.</h3>
+                  <div class="heading__subtitle">концепция</div>
+                </div>
+                <div class="how-work__item-content">
+                  <p>Встречаемся с&nbsp;заказчиком, обсуждаем вводные данные.</p>
+                  <p>Готовим три концепции издания.</p>
+                  <p>Создаем эскизы иллюстрированных страниц для каждой&nbsp;&mdash; с&nbsp;реальными текстами и&nbsp;изображениями.</p>
+                  <p>После выбора и&nbsp;доработки концепции согласовываем формат, объем, рубрикатор, план и&nbsp;график работ.</p>
+                  <p>Подписываем документы.</p>
+                </div>
+              </div>
+              <div class="how-work__item col-md-4">
+                <div class="heading heading--grey">
+                  <h3 class="heading__title">2.</h3>
+                  <div class="heading__subtitle">работа</div>
+                </div>
+                <div class="how-work__item-content">
+                  <p>Проводим исследовательскую, поисковую работу, наполняем издание текстами и&nbsp;иллюстрациями.</p>
+                  <p>Поэтапно предъявляем и&nbsp;согласуем результаты.</p>
+                  <p>Книга сверстана. После согласования с&nbsp;заказчиком очищаем права на&nbsp;изображения.</p>
+                  <p>Вставляем в&nbsp;макет иллюстрации полиграфического качества.</p>
+                </div>
+              </div>
+              <div class="how-work__item col-md-4">
+                <div class="heading heading--grey">
+                  <h3 class="heading__title">3.</h3>
+                  <div class="heading__subtitle">в&nbsp;печать!</div>
+                </div>
+                <div class="how-work__item-content">
+                  <p>Производим цветокоррекцию и&nbsp;допечатную подготовку.</p>
+                  <p>Передаем готовые файлы в&nbsp;типографию.</p>
+                  <p>Книга готова!</p>
+                </div>
+              </div>
+            </div>
+            <footer class="how-work__bottom"><a class="btn btn--block" href="#create" data-anchor="create">первый шаг к вашей книге</a></footer>
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <div class="container">
+          <div class="features__inner">   
+            <header class="features__header">
+              <div class="heading">
+                <h2 class="heading__title">Особенности</h2>
+                <div class="heading__subtitle">нашего метода</div>
+              </div>
+            </header>
+            <div class="features__row row">
+              <div class="features__item col-md-4">
+                <p>Тема, формат, структура издания учитывают ценности вашей компании и&nbsp;суть события.</p>
+              </div>
+              <div class="features__item col-md-4">
+                <p>Авторская графика, уникальные фотоматериалы, тексты, специально написанные лучшими авторами.</p>
+              </div>
+              <div class="features__item col-md-4">
+                <p>Полный цикл подготовки, эксклюзивное дизайнерское и&nbsp;материальное решение, ответственность за&nbsp;качество работы.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="new-books">
+        <div class="container">
+          <div class="new-books__inner">
+            <div class="new-books__item" data-sticky-btn data-indent="323">
+              <header class="new-books__header">
+                <div class="heading">
+                  <div class="heading__content">
+                    <div class="heading__title">Новые книги</div>
+                    <div class="heading__subtitle">издано в&nbsp;2017 году</div>
+                  </div>
+                </div>
+              </header>
+              <article class="book-description">
+                <div class="book-description__top">
+                  <div class="book-description__cover"><img src="img/content/world-travel.jpg" alt=""></div>
+                  <div class="book-description__content">
+                    <h2 class="book-description__title">Всемирный путешественник</h2>
+                    <div class="book-description__descr">
+                      <p>С&nbsp;1867 года русский генерал-лейтенант и&nbsp;издатель, владелец первого частного картографического заведения Алексей Афиногенович Ильин выпускал в&nbsp;течение одиннадцати лет журнал популярного землеведения &laquo;Всемирный Путешественник&raquo;. Повествуя о&nbsp;необыкновенных приключениях европейцев, журнал знакомил русскую публику с&nbsp;путешествиями по&nbsp;разным странам земного шара. Вместе с&nbsp;тем в&nbsp;каждом номере публиковалось множество географических, статистических и&nbsp;этнографических сведений научного толка.</p>
+                      <p>Настоящее издание представляет вниманию читателя наиболее примечательные и&nbsp;интересные путевые заметки, проиллюстрированные гравюрами.</p>
+                      <p>Проект Группы Интеррос.     </p>
+                    </div>
+                    <div class="book-description__descr-bottom">
+                      <div class="book-description__descr-logo"><img src="img/content/interros.jpg" width="170" height="85" alt="Интерос"></div>
+                    </div>
+                  </div>
+                  <div class="book-description__button"><a class="btn btn--block btn--block btn--block" href="javascript: void(0)" data-sticky>каталог</a></div>
+                </div>
+                <div class="book-description__bottom row">
+                  <div class="book-description__bottom-item col-md-4">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title">1867&ndash;1878</div>
+                          <div class="heading__subtitle">годы</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info-block__content">
+                      <p>все номера журнала &laquo;Всемирный путешественник&raquo; за&nbsp;этот период были изучены ради этого проекта</p>
+                    </div>
+                  </div>
+                  <div class="book-description__bottom-item col-md-4">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title">>2000</div>
+                          <div class="heading__subtitle">иллюстраций</div>
+                        </div>
+                      </div>
+                      <div class="info-block__content">
+                        <p>отсмотрели, отобрали и&nbsp;отреставрировали фоторедакторы и&nbsp;художники</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="book-description__bottom-item col-md-4">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title"> Дизайн</div>
+                          <div class="heading__subtitle">соответствует</div>
+                        </div>
+                      </div>
+                      <div class="info-block__content">
+                        <p>стилистике времён оригинального журнала</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="new-books__item" data-sticky-btn data-indent="148">
+              <article class="book-description">
+                <div class="book-description__top book-description__top--reverse">
+                  <div class="book-description__cover"><img src="img/content/w-magazine.jpg" alt="Футбол Чемпионаты мира"></div>
+                  <div class="book-description__content">
+                    <h2 class="book-description__title">Женский журнал</h2>
+                    <div class="book-description__descr">
+                      <p>Женщине нужен журнал не&nbsp;теоретический, но, прежде всего, практический, журнал повседневной жизни. Поэтому &laquo;Женский Журнал&raquo; предполагает обслуживать, в&nbsp;первую очередь, практические запросы женщин.</p>
+                      <p>Наша ближайшая цель&nbsp;&mdash; сгруппировать вокруг журнала как одиноких &laquo;холостых&raquo; женщин самостоятельного труда, так и&nbsp;семейных&nbsp;&mdash; жен, матерей и&nbsp;домашних хозяек под лозунгом лучшего устроения женской жизни, выработки лучших, наиболее совершенных форм женского быта.</p>
+                    </div>
+                  </div>
+                  <div class="book-description__button"><a class="btn btn--block" href="javascript: void(0)" data-sticky>каталог</a></div>
+                </div>
+                <div class="book-description__bottom row">
+                  <div class="book-description__bottom-item col-md-4">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title">Все</div>
+                          <div class="heading__subtitle">без исключения</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info-block__content">
+                      <p>номера журнала вошли в&nbsp;издание</p>
+                    </div>
+                  </div>
+                  <div class="book-description__bottom-item col-md-4">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title">Мода</div>
+                          <div class="heading__subtitle">конца 1920-х</div>
+                        </div>
+                      </div>
+                      <div class="info-block__content">
+                        <p>стала стилевой основой издания</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="book-description__bottom-item col-md-4">
+                    <div class="info-block">
+                      <div class="info-block__top">
+                        <div class="heading heading--grey">
+                          <div class="heading__title"> ОБЛОЖКИ</div>
+                          <div class="heading__subtitle">журналов</div>
+                        </div>
+                      </div>
+                      <div class="info-block__content">
+                        <p>превращены в&nbsp;самостоятельные произведения искусства&nbsp;&mdash; плакаты</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="first-step" id="create">
+        <div class="container">
+          <div class="first-step__inner">
+            <header class="first-step__header">
+              <div class="heading">
+                <h2 class="heading__title">Первый шаг</h2>
+                <div class="heading__subtitle">к вашей книге</div>
+              </div>
+            </header>
+            <div class="first-step__content row">
+              <div class="first-step__item col-sm-6 col-md-6">
+                <div class="first-step__item-text">
+                  <p>Оставьте свой номер телефона, мы перезвоним<br> и договоримся о встрече</p>
+                </div>
+                <form class="form-callback">
+                  <div class="form-callback__field">
+                    <label for="name">Как вас зовут</label>
+                    <input type="text" name="name" id="name" placeholder="Имя Фамилия" required>
+                  </div>
+                  <div class="form-callback__field">
+                    <label for="tel">Ваш телефон</label>
+                    <input type="tel" name="tel" id="tel" placeholder="+7 ___ __ __" required>
+                  </div>
+                  <div class="form-callback__submit">             
+                    <input class="btn btn--block" type="submit" value="заказать звонок">
+                  </div>
+                </form>
+              </div>
+              <div class="first-step__item col-sm-6 col-md-6">
+                <div class="first-step__item-text">
+                  <p>Или позвоните Наталье Логутовой,<br> она ответит на любые вопросы:</p>
+                </div>
+                <div class="first-step__contact-link">
+                  <div class="first-step__contact-link-img"><img src="img/content/user-photo.jpg"></div><a href="tel:+79031442032">+7 903 144-20-32</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="clients">
+        <div class="container">
+          <div class="clients__inner">
+            <div class="clients__header">
+              <div class="heading">
+                <h2 class="heading__title">Клуб клиентов</h2>
+                <div class="heading__subtitle">присоединяйтесь!</div>
+              </div>
+            </div>
+            <div class="clients__list">
+              <div class="clients__item"><img src="img/content/metall-company.png" alt=""></div>
+              <div class="clients__item"><img src="img/content/depart-culture.png" alt=""></div>
+              <div class="clients__item"><img src="img/content/commersant.png" alt=""></div>
+              <div class="clients__item"><img src="img/content/rbc.png" alt=""></div>
+              <div class="clients__item"><img src="img/content/depart-study.png" alt=""></div>
+              <div class="clients__item"><img src="img/content/magnezit.png" alt=""></div>
+              <div class="clients__item"><img src="img/content/blag-fond.png" alt=""></div>
+              <div class="clients__item"><img src="img/content/interos.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner"><a class="footer__logo" href="/"><img src="img/static/logo-1.svg" alt="Agey Tomesh Wam"><img src="img/static/logo-3.svg" alt="HSE ART BOOKS"></a>
+            <div class="footer__nav">
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item"><a href="" title="Каталог">каталог</a></li>
+                  <li class="nav__item"><a href="" title="Как мы работаем">как мы работаем</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__right">
+              <div class="footer__right-item">
+                <div class="footer__social">
+                  <div class="social">
+                    <ul class="social__list">
+                      <li class="social__item"><a href="#">Faceebok
+                          <svg class="icon-fb " width="30" height="30">
+                            <use xlink:href="#icon-fb"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a href="#">Vkontakte
+                          <svg class="icon-vk " width="30" height="30">
+                            <use xlink:href="#icon-vk"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a href="#">Instagram
+                          <svg class="icon-inst " width="30" height="30">
+                            <use xlink:href="#icon-inst"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__right-item">
+                <div class="footer__search"> 
+                  <div class="search">
+                    <input class="search__field">
+                    <button class="search__btn btn btn--search" type="button">
+                      <svg class="icon-search " width="17.5" height="17.5">
+                        <use xlink:href="#icon-search"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="footer__img"><img src="img/static/logo-2.svg" width="223.1" height="15.4" alt="HSE ART BOOKS"></div>
+              </div>
+            </div>
+            <div class="footer__contacts">
+              <address class="contacts"><a class="contacts__link" href="javascript:void(0)">москва,<br> м. дмитровка, 24/2</a><a class="contacts__link" href="tel:+74959136295">+&nbsp;7&nbsp;(495)&nbsp;913&nbsp;62&nbsp;95</a><a class="contacts__link" href="tel:+7495913629">+&nbsp;7&nbsp;(495)&nbsp;913&nbsp;62&nbsp;9</a></address>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="js/common.js"></script>
+      <script src="js/index.js"></script>
+    </body>
+  </head>
+</html>
