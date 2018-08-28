@@ -1,0 +1,43 @@
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="11"
+   height="26"
+   viewBox="0 0 11 26"
+   version="1.1"
+   id="svg15"
+   sodipodi:docname="[_] copy.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+
+  <defs
+     id="defs6" />
+  <g
+     id="front"
+     style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1"
+     transform="translate(-29,-22)">
+    <g
+       id="book/book"
+       transform="translate(-65,-1912)"
+       style="fill:#fff">
+      <g
+         id="Group-6"
+         transform="translate(65,1570)">
+        <g
+           id="[&gt;]"
+           transform="matrix(-1,0,0,1,70,342)">
+          <g
+             id="Group-17"
+             style="fill-opacity:0.02999998;stroke-width:1" />
+          <polygon
+             id="Combined-Shape-Copy-2"
+             points="30,48 32,48 41,35 32,22 30,22 39,35 " />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

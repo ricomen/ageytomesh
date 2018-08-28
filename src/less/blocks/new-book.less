@@ -1,0 +1,33 @@
+.new-books {
+  &__inner {
+    // padding-top: 62px;
+    // padding-bottom: 66px;
+    @media @small {
+      padding-top: 33px;
+      padding-bottom: 42px;
+    }
+    border-bottom: 1px solid #be1823;
+  }
+  &__header {
+    margin-bottom: 69px;
+    padding-top: 29px;
+    @media @small {
+      margin-bottom: 31px;
+    }
+  }
+
+  &__item {
+    padding-top: 49px;
+    padding-bottom: 38px;
+    border-bottom: 1px solid rgba(173, 177, 176, 0.61);
+    &:nth-child(odd) {
+      padding-top: 32px;
+      padding-bottom: 40px;
+    }
+    &:last-child {
+      padding-top: 49px;    
+      padding-bottom: 60px;
+      border: none;      
+    }
+  }
+}

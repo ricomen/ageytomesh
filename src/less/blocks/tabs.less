@@ -1,0 +1,31 @@
+.tabs {
+	&__nav {
+		display: flex;
+		border-bottom: 1px solid #be1823;
+		margin-bottom: 16px;
+		&-item {
+			padding: 12px 15px 11px;
+			color: #434343;
+			font-size: 18px;
+			font-weight: 300;
+			border: 1px solid #be1823;
+			border-radius: 3px 3px 0 0;
+			border-right: none;
+			border-bottom: none;
+			text-decoration: none;
+			transition: .25s ease-in-out;
+			&:last-child {
+				border-right: 1px solid #be1823;
+			}
+			&.is-active {
+				color: #fff;
+				background-color: #be1823;
+			}
+		}
+	}
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}

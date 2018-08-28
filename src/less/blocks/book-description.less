@@ -1,0 +1,117 @@
+.book-description {
+  &__top {
+    .row-flex();
+    margin-bottom: 70px;
+    .flex-direction-md(column);
+    .align-items-md(center);
+    @media @small {
+      margin-bottom: 0;
+    }
+    &--reverse {
+      flex-direction: row-reverse;
+      .book-description__button {
+        padding-top: 99px;                
+        @media @tablet {
+          padding-right: 0;
+        }
+      }
+      .book-description__cover {
+        padding-top: 16px;
+      }
+    }
+  }//top
+
+
+  &__top--reverse &__content{
+    .offset-right(1);
+    .offset-left(0);    
+    .offset-right-md(0);
+  }//top--reverse
+
+  &__title {
+    margin-bottom: 42px;  
+    padding-left: 3px; 
+    font-size: 36px;
+    line-height: 1.333;
+    font-family: @bsk;
+    font-weight: normal;
+    font-style: italic;
+    @media @small {
+      margin-bottom: 18px;
+    }
+  }//title
+
+  &__descr {
+    &-logo {
+      margin-top: 59px;
+      margin-left: -5px;
+      @media @phone {
+        text-align: center;
+      }
+    }
+    p {
+      margin: 32px 0;
+      line-height: 1.8;
+      letter-spacing: 0.3px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @media @phone {
+      margin-bottom: 20px;
+    }
+  }//descr
+
+  &__button {
+    .size(2);
+    .size-md(6);
+    .size-sm(6);
+    .size-xs(12);
+    padding-top: 92px;        
+    @media @small {
+      padding: 0;
+    }
+  }//button
+
+  &__cover,
+  &__content,
+  &__button {
+    .col();
+  }//cover content button
+
+  &__cover {
+    padding-top: 23px;    
+    text-align: center;
+    .size(3);
+    .size-sm(12);
+    .size-md(6);
+    @media @tablet {
+      padding-top: 0;
+      padding-right: 0;
+      padding-left: 0;
+      margin-bottom: 32px;
+    }
+    img {
+      box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.2),
+                  0 0 10px 0 rgba(0, 0, 0, 0.2)
+    }
+  }//cover
+
+  &__content {
+    .size(6);
+    .size-sm(12);
+    .size-md(6);
+    .offset-left(1);
+    .offset-left-md(0);
+    @media @small {
+      margin-bottom: 24px;
+    }
+  }//content
+
+
+  &__bottom {    
+    @media @tablet {
+      display: none;
+    }
+  }//button
+}

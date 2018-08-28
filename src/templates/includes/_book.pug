@@ -1,0 +1,157 @@
+-var books = [{ title: "Россия. 20-й век", subtitle: ""},{ title: "Советский союз: образ жизни", subtitle: "1945–1985"}, {title: "СССР на стройке", subtitle: ""}, {title: "Железная логика России", subtitle: "Подарочное издание к юбилею компании ОМК"}, {title: "Советское кино. 1919–1991", subtitle: ""}, {title: "Женский журнал", subtitle: ""}, {title: "Русский театр. 1824–1941", subtitle: ""}, {title: "Наши мультфильмы", subtitle: ""}, {title: "Спорт в СССР", subtitle: ""}, {title: "Олимпийские зимние игры", subtitle: "Иллюстрированная история. 1924–2014"}, {title: "Советское наивное искусство", subtitle: ""}, {title: "Время игры", subtitle: ""}, {title: "Русский иллюстрирован-ный журнал. 1703–1941", subtitle: ""}, {title: "Карикатура", subtitle: ""}, {title: "Красная армия", subtitle: ""},{title: "1917", subtitle: ""},{title: "Футбол. Чемпионаты мира. 1930–2014", subtitle: ""},{title: "1418 дней", subtitle: "К 60-летию Победы в Великой Отечественной войне"},{title: "The Crisis Tymes", subtitle: ""},{title: "Женский журнал", subtitle: ""},{title: "Россия. XX век. Пресса", subtitle: ""},{title: "Вокруг света", subtitle: ""},{title: "Всемирный путешественник", subtitle: "Путевые заметки о географических открытиях и путешествиях по странам земного шара"}];
+
+-var filterText = [{ item: "россия", count: 25}, { item: "ссср", count: 9}, { item: "искусство", count: 11}, { item: "спорт", count: 18}, { item: "путешествия", count: 7}, { item: "цивилизация", count: 13}]
+
+section.book
+  .book__hero
+    .book__hero-img(style="background-image: url('img/content/book-illustration/hero.jpg')")
+
+    .container
+      .book__cover
+        img(src="img/content/w-trav.jpg"
+            alt="Всемирный путешественник")
+      //- .book__cover
+      //-   img(src="https://www.placehold.it/250x250"
+      //-       alt="Всемирный путешественник")
+  .container
+    header.book__header
+      h1.book__name Всемирный путешественник
+    .book__title-list
+      .book__meta
+        table.book__meta-table
+          tr
+            td ISBN
+            td 978-5-910020-42-3
+          tr
+            td Издательство
+            td М.: Agey Tomesh, 2017. 216 с., ил.
+          tr
+            td Формат
+            td 164 × 235 Твердый переплет
+      .book__intro
+        h2.book__intro-title Путевые заметки о&nbsp;географических открытиях и&nbsp;путешествиях по&nbsp;странам земного шара
+        .book__intro-text
+          p С&nbsp;1867 года русский генерал-лейтенант и&nbsp;издатель, владелец первого частного картографического заведения Алексей Афиногенович Ильин выпускал в&nbsp;течение одиннадцати лет журнал популярного землеведения &laquo;Всемирный Путешественник&raquo;. Повествуя о&nbsp;необыкновенных приключениях европейцев, журнал знакомил русскую публику с&nbsp;путешествиями по&nbsp;разным странам земного шара. Вместе с&nbsp;тем в&nbsp;каждом номере публиковалось множество географических, статистических и&nbsp;этнографических сведений научного толка.
+          p Настоящее издание представляет вниманию читателя наиболее примечательные и&nbsp;интересные путевые заметки, проиллюстрированные гравюрами.
+
+    .book__slider
+      .book__slider-controls
+        .book__slider-prev предыдущая страница
+          button(type="button").btn.btn--prev
+          //- +icon('chevron-left', 18, 26)
+        .book__slider-next следующая страница
+          button(type="button").btn.btn--next
+          //- +icon('chevron-right', 18, 26)
+      .book__slider-wrap
+        .book__slider-list.swiper-wrapper
+          .book__slider-item.swiper-slide
+            img(src="img/content/book/book-page-1.jpg", alt="")
+          .book__slider-item.swiper-slide
+            img(src="img/content/book/book-page-2.jpg", alt="")
+          .book__slider-item.swiper-slide
+            img(src="img/content/book/book-page-1.jpg", alt="")
+          .book__slider-item.swiper-slide
+            img(src="img/content/book/book-page-2.jpg", alt="")
+          .book__slider-item.swiper-slide
+            img(src="img/content/book/book-page-2.jpg", alt="")
+          .book__slider-item.swiper-slide
+            img(src="img/content/book/book-page-2.jpg", alt="")
+          .book__slider-item.swiper-slide
+            img(src="img/content/book/book-page-2.jpg", alt="")
+          .book__slider-item.swiper-slide
+            img(src="img/content/book/book-page-2.jpg", alt="")
+      .swiper-pagination
+      .book__slider-pagination
+
+section.book-content
+  .container
+    .book-content__top-row
+      a.book-content__prev.fl-left.btn.btn--prev(href="javascript: void(0)") Предыдущая страница
+        
+    header.book-content__header
+      h2.book-content__header-title человеческие жертвоприно<wbr>шения в ост-индии
+      .book-content__header-descr рассказ генерала джона кемпбела 
+
+    .book-content__illustration-block.row
+      .book-content__pic.col-lg-8
+        img(src="img/content/book-illustration/image-1.jpg"            
+            alt="Церемония жертвоприношений в Хондистане")
+      .book-content__pic-descr.col-xs-8.col-md-2 Церемония жертвоприношений в Хондистане
+    .book-content__textual
+      p Публичность жертвоприношения составляет одно из его существенных условий. В&nbsp;течение месяца, предшествующего жертвоприношению, то и дело устраиваются пиршества, на которых пирующие напиваются допьяна и пляшут вокруг мериахи, одетой в лучшее платье и украшенной венком из цветов. Накануне жертвоприношения ее приводят, пьяную, к столбу, вкопанному в землю и имеющему на вершине изображение божества (павлина, слона и т. п.). Толпа принимается плясать при звуках музыки и поет гимны, обращенные к земле. По словам Риккетса, который собрал сообщаемые им сведения на границе Бенгалии, хонды прибегали к человеческим жертвоприношениям преимущественно в то время, когда занимались возделыванием шафрана.
+    .book-content__illustration-block.row
+      .book-content__pic.col-sm-4.col-sm-push-8
+        img(src="img/content/book-illustration/image-2.jpg"            
+            alt="Женщины племени пахуинов")
+      .book-content__pic-descr.col-xs-7.col-sm-2.col-sm-offset-2 Женщины племени пахуинов
+
+    .book-content__textual
+      p Они очень хладнокровно уверяли, что без пролития крови невозможно достигнуть того, чтобы это растение давало прекрасный темный цвет, высоко ценимый ими. Что касается самого жертвоприношения, то рассказы о нем видоизменялись до бесконечности. В некоторых местах жертву – как говорили – удушали между двумя бамбуковыми досками, постепенно сжимаемыми вокруг ее бюста, и только в минуту предсмертной агонии жертвы жрец ударами топора рассекал ее тело надвое. В других местах — как нам рассказывали – труп закапывали в землю, не отрезывая от него ни одного куска мяса; но в этом случае польза жертвоприношения, по общему мнению, ограничивалась пределами владений лица, на счет которого оно было устроено. Этим объясняется рвение хондов поделить между собой останки жертвы и рассеять их на возможно большем пространстве. Так как предполагалось, что приношение идолу могло иметь действие только в том случае, если делалось в сам день совершения кровавого обряда, то куски мяса, отрезанные от несчастной жертвы, разносились на невероятно большие расстояния при помощи скороходов, которые нарочно для этой цели расставлялись на известном расстоянии друг от друга и представляли собой станции этой особого рода почты.
+    .book-content__bottom-row
+      a.book-content__next.fl-right.btn.btn--next(href="javascript: void(0)") Следующая страница        
+
+section.catalog.catalog--slider
+  .container
+    .catalog__header
+      .heading
+        .heading__content
+          h2.heading__title Смотри также
+        .heading__right
+          a.btn(href="javascript:void(0)") каталог
+
+    .catalog__filter
+        button.catalog__filter-toggler(type="button")
+          snap.catalog__filter-toggler-icon
+          snap.catalog__filter-toggler-text фильтры
+          snap.catalog__filter-toggler-icon
+        .catalog__filter-list-wrap
+          ul.catalog__filter-list
+            li.catalog__filter-item
+              a(href="javascript:void(0)") россия
+                span 25
+            li.catalog__filter-item
+              a(href="javascript:void(0)") ссср
+                span 9
+            li.catalog__filter-item
+              a(href="javascript:void(0)") искусство
+                span 11
+            li.catalog__filter-item
+              a(href="javascript:void(0)") спорт
+                span 18
+            li.catalog__filter-item
+              a(href="javascript:void(0)") путешествия
+                span 7
+            li.catalog__filter-item
+              a(href="javascript:void(0)") цивилизация
+                span 13        
+          ul.catalog__filter-list
+            li.catalog__filter-item
+              a(href="javascript:void(0)") 2017
+                span 5
+            li.catalog__filter-item
+              a(href="javascript:void(0)") 2016
+                span 7
+            li.catalog__filter-item
+              a(href="javascript:void(0)") 2015
+                span 11
+            li.catalog__filter-item
+              a(href="javascript:void(0)") 2014
+                span 12
+
+    .catalog__slider
+      button.catalog__slider-prev.btn.btn--prev предыдущая страница
+        
+      button.catalog__slider-next.btn.btn--next следующая страница
+        
+      .catalog__slider-container.swiper-container
+        .catalog__slider-list.swiper-wrapper
+          each val, index in books
+            article.catalog__item.swiper-slide
+              .book-item
+                .book-item__cover
+                  img(src="img/content/covers/cover-" + [index + 1] + ".jpg" alt=val.title)
+                h2.book-item__title #{val.title}
+                if(val.subtitle)
+                  h3.book-item__subtitle #{val.subtitle}
+    footer.catalog__bottom
+         a.btn.btn--block(href="javascript:void(0)") каталог

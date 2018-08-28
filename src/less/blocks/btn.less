@@ -1,0 +1,108 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 18px 26px;
+  cursor: pointer;
+  outline: none;
+  font-family: @bsk;
+  font-style: italic;
+  color: #be1823;
+  background: #fff;
+  border: 2px solid #be1823;
+  border-radius: 3px;
+  text-decoration: none;
+  letter-spacing: 1.8px;
+  text-align: center;
+  box-sizing: border-box;
+  transition: background 0.25s ease-in-out, color 0.25s ease-in-out;
+  &:hover {
+    color: #fff;
+    background: #be1823;
+  }
+  &--addBook {
+    // padding: initial;
+    font-size: 16px;
+    font-family: @pn;
+    font-style: normal;
+    font-weight: 300;
+    border: none;
+    letter-spacing: initial;
+    &:hover {
+      color: #be1823;
+      background: none;
+    }
+  }
+  &--search {
+    border: none;
+    background: transparent;
+    &:hover {
+      opacity: 0.5;
+      background: transparent;
+    }
+  }
+  &--block {
+    display: block;
+    width: 100%;
+  }
+  &--next, &--prev {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    font-size: 0;
+    display: block;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    background-color: rgba(190, 24, 35, .03);
+    @media @tablet {
+      width: 50px;
+      height: 50px;
+      &::after {
+        width: 7px;
+        height: 18px;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-repeat: no-repeat;
+      width: 11px;
+      height: 26px;
+      background-repeat: no-repeat;
+      background-size: contain;      
+    }
+  }
+  &--next:hover {
+    &::after {
+      background-image: data-uri('../img/static/arrow-right-white.svg');
+    }
+  }
+  &--prev:hover {
+    &::after {
+      background-image: data-uri('../img/static/arrow-left-white.svg');
+    }
+  }
+  &--next {
+    &::after {
+      transition: background-color 0.25s ease-in-out;
+      background-image: data-uri('../img/static/arrow-right.svg');
+    }
+  }
+  &--prev {
+    &::after {
+      transition: background-color 0.25s ease-in-out;
+      background-image: data-uri('../img/static/arrow-left.svg');
+    }
+  }
+}
+
+.btn-edit {
+  font-size: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+}

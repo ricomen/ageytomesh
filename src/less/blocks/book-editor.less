@@ -1,0 +1,256 @@
+.book-editor {
+	&__cover {
+		display: flex;
+		margin-bottom: 30px;
+	}//top
+
+	&__title {
+		font-size: 20px;
+		font-weight: 300;
+		color: #333;
+	}//title
+
+	&__row {
+		display: flex;
+		margin-bottom: 15px;
+		&:last-of-type {
+			// margin-bottom: 0;
+		}
+	}//row
+
+	&__isbn {
+		width: 202px;	
+		margin-right: 40px;
+	}//isbn
+
+	&__publishing {
+		width: 423px;
+		margin-right: 40px; 	
+	}//publishing
+
+	&__format {
+		width: 418px;
+	}//format
+
+	&__category {
+		width: 468px;
+		margin-right: 15px;
+	}//category
+
+	&__year {
+		width: 73px;
+		margin-right: 15px;		
+	}//year
+	
+	&__authors {
+		width: 550px;
+	}//authors
+
+	&__spread,
+	&__excerpt  {
+		width: 550px;
+	}//spread, excert
+
+	&__spread {
+		margin-right: 20px;
+	}//sread
+
+	&__book-cover {		
+		margin-right: 23px;
+		width: 100px;
+		&-img {
+			position: relative;
+		}
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+		a {
+			padding: 1px 4px;
+			font-size: 14px;
+			color: #be1823;
+			position: absolute;
+			top: 50%;
+			left: 50%;			
+			transform: translate(-50%, -50%);
+			text-align: center;
+			background-color: rgba(255, 255, 255, 0.9);
+		}
+		&-resol {
+			font-size: 13px;
+			color: #333;
+		}
+
+	} //cover
+
+	&__book-props {
+		flex-grow: 1;
+	}//book-props
+
+	&__label {
+		display: block;		
+		font-size: 18px;
+		font-weight: 300;
+		margin-bottom: 10px;
+		.text-overflow;
+		span {
+			margin-right: 10px;
+		}
+	}//label
+
+	&__book-props-row {
+		margin-bottom: 25px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&--flex {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}//book-props-row
+
+	&__book-props-items {
+		display: flex;
+		align-items: center;
+	}
+
+	&__book-props-item {
+		margin-right: 35px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__last-changes {
+		font-size: 14px;
+		// &-label {
+
+		// }
+	}
+
+	&__btn {
+		cursor: pointer;
+		font-family: @pn;
+		font-size: 18px;
+		font-weight: 300;
+		letter-spacing: initial;
+		font-style: normal;
+		border-radius: 0;
+		border: none;
+		outline: none;
+		&--delete {
+			margin-left: auto;
+			margin-right: 20px;
+			color: #be1823;
+			background: transparent;			
+			position: relative;
+			padding: initial;
+			padding-left: 25px;
+			&:hover {
+				color: #be1823;				
+				background: transparent;
+			}
+			svg {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 19px;
+				height: 17px;
+			}
+		}//delete
+
+		&--add-category {
+			font-size: 16px;
+			letter-spacing: initial;
+			padding: 8px 20px;
+			border: 1px solid #b7b7b7;
+			color: #b7b7b7;
+			transition: 0.25s ease-in-out;
+			&:hover {
+				border-color: #be1823;
+			}
+		}
+		
+		&-edit {	
+			cursor: pointer;	
+			position: relative;
+			padding-left: 18px;
+			font-size: 14px;
+			font-weight: 300;
+			color: #be1823;
+			background: transparent;
+			border: none;
+			outline: none;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 14px;
+				height: 14px;
+				background-image: url(../img/static/pencil-edit-button.svg);
+				background-size: contain;
+			}
+		}//edit
+
+		&-addCol {
+			cursor: pointer;
+			font-size: 14px;
+			font-weight: 300;
+			color: #be1823;
+			background: transparent;
+			border: none;
+			outline: none;
+		}
+	}//btn
+
+	&__spread {
+		&-list {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			white-space: nowrap;			
+			overflow: hidden;			
+		&::after {
+			position: absolute;
+			content: '';
+			right: 0;
+			top: 0;
+			height: 100%;
+			width: 30px;
+			background: linear-gradient(to right, transparent, #fff);
+			z-index: 5;
+		}
+
+		}
+		&-item {
+			display: inline-block;
+			vertical-align: middle;
+			max-width: 221px;
+			border: 1px solid #d5d5d5;
+			border-radius: 2px;
+			img {
+				max-width: 50%;
+				height: auto;
+				box-sizing: border-box;
+				&:first-child {
+					border-right: 1px solid #d5d5d5
+				}
+			}
+		}
+	}//spread
+
+	&__excerpt {
+		&-content {
+			height: 162px;
+			overflow: hidden;
+			background-image: url(../img/static/excerpt.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}//excert
+}//book-editor

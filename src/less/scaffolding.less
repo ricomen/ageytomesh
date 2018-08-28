@@ -1,0 +1,96 @@
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-size: 100%;
+}
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+body {    
+  min-width: 320px;  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: @pn;
+  font-size: 18px;
+  font-style: normal;
+  color: #17181a;
+  background: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: middle;
+}
+
+.container {  
+  max-width: 1170px;
+  .center();  
+  padding: 0 15px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;  
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+.debug {
+  .debug(rgba(255,0,0,.5), 1px)
+}
+.swiper-pagination {  
+  left: 50%;
+  transform: translateX(-50%) !important;
+  white-space: nowrap;
+  @media @tablet {
+    display: block;
+  }
+
+  .swiper-pagination-bullet {
+    cursor: pointer;
+    font-family: "Baskerville", serif;
+    font-size: 18px;
+    font-style: italic;
+    vertical-align: middle;
+    line-height: 1.111;
+    margin-right: 35px;
+    opacity: 1;
+    color: #be1823;
+    background: transparent;
+    @media @tablet {
+      margin-right: 20px;     
+      font-size: 0;
+      width: 5px;
+      height: 5px;
+      background-color: #be1823;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &-active {
+      color: #17181a;
+      @media @tablet {
+        width: 7px;
+        height: 7px;
+        background-color: #17181a;
+      }
+    }
+  }//bullet
+}
+// градиент для текста
+// -------------------
+// -webkit-background-clip: text;
+// -webkit-text-fill-color: transparent;
+// -------------------
+
+//от переполнения текстом
+// white-space: nowrap;
+// overflow: hidden;
+// text-overflow: ellipsis;

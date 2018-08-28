@@ -1,0 +1,289 @@
+.modal(id="book-edit")
+  .modal__dialog
+    button(type="button").modal__close &#10006;
+    .modal__content
+      .book-editor
+        .book-editor__cover
+          .book-editor__book-cover
+            .book-editor__label Обложка
+            .book-editor__book-cover-img
+              img(src="https://www.placehold.it/740x1085")
+              a(href="/") Сменить обложку
+                .book-editor__book-cover-resol (740x1085)
+        
+          .book-editor__book-props
+            .book-editor__book-props-row
+              label.book-editor__label(for="book-name") Название книги
+              .book-editor__book-field.input-text.input-text--lg
+                input(type="text" id="book-name" name="book-name" value="Футбол. Чемпионаты мира. 1930–2014")
+
+            .book-editor__book-props-row.book-editor__book-props-row--flex
+              .book-editor__book-props-items
+                .book-editor__book-props-item.input-checkbox
+                  input(type="checkbox",id="onMain", name="onMain") 
+                  label.input-checkbox__label(for="onMain") На главную
+                .book-editor__book-props-item.input-checkbox
+                  input(type="checkbox",id="publish", name="publish") 
+                  label.input-checkbox__label(for="publish") Опубликровать
+                .book-editor__book-props-item.input-text.input-text--xs
+                  label.input-number__text(for="priority") Приоритет в сортировке
+                  input(type="text" id="priority" size="3" value="1" style="display: inline-block; text-align: center")
+
+              .book-editor__last-changes
+                .book-editor__last-changes-label Последние изменения:
+                span.book-editor__last-changes-text 14.02.2018 14:55&nbsp;Иванов Иван Иоан
+      
+      .book-editor__tabs.tabs(data-tabs)
+        .tabs__nav
+          a.tabs__nav-item(href="#tab1") На главной
+          a.tabs__nav-item.is-active(href="#tab2") В каталоге
+        ul.tabs__list
+          .tabs__item(id="tab1")
+            .tabs__content
+              .book-editor__cover
+                .book-editor__book-cover
+                  .book-editor__label Фон обложки
+                  .book-editor__book-cover-img   
+                    img(src="https://www.placehold.it/1920x745")
+                    a(href="/") Сменить
+                      .book-editor__book-cover-resol (1920x745) 
+
+                .book-editor__book-props
+                  .book-editor__book-props-row
+                    label.book-editor__label(for="book-name") Подстрочный текст названия
+                    .book-editor__book-field.input-text
+                      input(type="text" id="book-name" name="book-name" value="Футбол. Чемпионаты мира. 1930–2014")
+              .book-editor__label Анонс для каталога
+              .book-editor__announcement
+                p here wyswyg
+              .book-editor__row
+                .book-editor__isbn.input-text
+                  label.book-editor__label(for="isbn") ISBN
+                  input(type="text" id="isbn" name="isnb" value="978-5-910020-3")
+                .book-editor__publishing.input-text
+                  label.book-editor__label(for="publishing") Издательство
+                  input(type="text" id="publishing" name="publishing" value="М.: Agey Tomesh, 2017. 216 с., ил.")
+                .book-editor__format.input-text
+                  label.book-editor__label(for="format") Формат
+                  input(type="text" id="format" name="format" value="164 × 235 Твердый переплет")
+              .book-editor__row
+                .book-editor__category.input-select
+                  label.book-editor__label(for="category") Категории
+                  input(type="text" id="category" name="category" value="")
+                  .input-select__dropdown.input-select__list
+                    .input-select__item.input-checkbox
+                      input(type="checkbox",id="rus", name="") 
+                      label.input-checkbox__label(for="rus") россия
+                    .input-select__item.input-checkbox
+                      input(type="checkbox",id="cccp", name="") 
+                      label.input-checkbox__label(for="cccp") cccp
+                    .input-select__item.input-checkbox
+                      input(type="checkbox",id="1", name="") 
+                      label.input-checkbox__label(for="1") исскуство
+                    button.input-select__item.btn.book-editor__btn.book-editor__btn--add-category((click)="addCategory()") Добавить категорию
+
+                .book-editor__year.input-text
+                  label.book-editor__label(for="year") Год
+                  input(type="text" id="year" name="year" value="")
+                .book-editor__authors.input-text
+                  label.book-editor__label(for="authors") Авторы
+                  input(type="text" id="authors" name="authors" value="")
+                  excerpt
+              .book-editor__row
+                .book-editor__spread
+                  .book-editor__spread-top
+                    label.book-editor__label
+                      span Развороты
+                      button.book-editor__btn-edit Изменить
+                  ul.book-editor__spread-list
+                    li.book-editor__spread-item
+                      img(src="img/content/book/book-page-1.jpg", alt="")
+                      img(src="img/content/book/book-page-2.jpg", alt="")
+                    li.book-editor__spread-item
+                      img(src="img/content/book/book-page-1.jpg", alt="")
+                      img(src="img/content/book/book-page-2.jpg", alt="")
+                    li.book-editor__spread-item
+                      img(src="img/content/book/book-page-1.jpg", alt="")
+                      img(src="img/content/book/book-page-2.jpg", alt="")
+
+                .book-editor__excerpt
+                  .book-editor__excerpt-top
+                    label.book-editor__label
+                      span Выдержка из книги
+                      button.book-editor__btn-edit Изменить
+                  .book-editor__excerpt-content
+
+          .tabs__item(id="tab2")
+            .tabs__content
+              .book-editor__cover
+                .book-editor__book-cover
+                  .book-editor__label Фон обложки
+                  .book-editor__book-cover-img
+                    img(src="https://www.placehold.it/1920x745")
+                    a(href="/") Сменить
+                      .book-editor__book-cover-resol (1920x745) 
+
+                .book-editor__book-props
+                  .book-editor__book-props-row
+                    label.book-editor__label(for="book-name") Подстрочный текст названия
+                    .book-editor__book-field.input-text
+                      input(type="text" id="book-name" name="book-name" value="Футбол. Чемпионаты мира. 1930–2014")
+              .book-editor__label Анонс для главной
+              .book-editor__announcement
+                p here wyswyg
+
+              .book-editor__label
+                span Колонки:
+                button.book-editor__btn-addCol((click)="addColumn()") + Добавить колонку
+              .book-editor__row.row
+                .col-md-3
+                  .info-block-editor
+                    button.info-block-editor__close((click)='delColumn()') &#10006;
+                    .info-block-editor__row
+                      .input-text.input-text--xs.info-block-editor__input
+                        input(type="text", name="s" value="7")
+                    .info-block-editor__row
+                      .input-text.input-text--xs.info-block-editor__input
+                        input(type="text", name="s" value="месяцев")
+                    .info-block-editor__row
+                      .input-text.input-text--xs.info-block-editor__input
+                        textarea(name="") Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repudiandae, dolore ea id sed necessitatibus, voluptate, maxime quas enim quo delectus blanditiis. Voluptas, maxime accusantium quidem corporis quibusdam corrupti rerum!
+                .col-md-3
+                  .info-block-editor
+                    button.info-block-editor__close((click)='delColumn()') &#10006;
+                    .info-block-editor__row
+                      .input-text.input-text--xs.info-block-editor__input
+                        input(type="text", name="s" value="7")
+                    .info-block-editor__row
+                      .input-text.input-text--xs.info-block-editor__input
+                        input(type="text", name="s" value="месяцев")
+                    .info-block-editor__row
+                      .input-text.input-text--xs.info-block-editor__input
+                        textarea(name="") Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repudiandae, dolore ea id sed necessitatibus, voluptate, maxime quas enim quo delectus blanditiis. Voluptas, maxime accusantium quidem corporis quibusdam corrupti rerum!
+                .col-md-3
+                  .info-block-editor
+                    button.info-block-editor__close((click)='delColumn()') &#10006;
+                    .info-block-editor__row
+                      .input-text.input-text--xs.info-block-editor__input
+                        input(type="text", name="s" value="7")
+                    .info-block-editor__row
+                      .input-text.input-text--xs.info-block-editor__input
+                        input(type="text", name="s" value="месяцев")
+                    .info-block-editor__row
+                      .input-text.input-text--xs.info-block-editor__input
+                        textarea(name="") Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repudiandae, dolore ea id sed necessitatibus, voluptate, maxime quas enim quo delectus blanditiis. Voluptas, maxime accusantium quidem corporis quibusdam corrupti rerum!
+                .col-md-3
+                  .info-block-editor
+                    button.info-block-editor__close((click)='delColumn()') &#10006;
+                    .info-block-editor__row
+                      .input-text.input-text--xs.info-block-editor__input
+                        input(type="text", name="s" value="7")
+                    .info-block-editor__row
+                      .input-text.input-text--xs.info-block-editor__input
+                        input(type="text", name="s" value="месяцев")
+                    .info-block-editor__row
+                      .input-text.input-text--xs.info-block-editor__input
+                        textarea(name="") Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repudiandae, dolore ea id sed necessitatibus, voluptate, maxime quas enim quo delectus blanditiis. Voluptas, maxime accusantium quidem corporis quibusdam corrupti rerum!
+
+
+    .modal__bottom.modal__bottom--flex
+      button.btn( (click)="fuckTheSystem()") Сохранить
+      button.btn.book-editor__btn.book-editor__btn--delete((click)="deleteBook()")
+        svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 485.811 485.811', style='enable-background:new 0 0 485.811 485.811;', xml:space='preserve')
+          path(fill='#be1823',class='attention-icon' d='M476.099,353.968l-170.2-294.8c-27.8-48.7-98.1-48.7-125.8,0l-170.3,294.8c-27.8,48.7,6.8,109.2,62.9,109.2h339.9\
+          C468.699,463.168,503.899,402.068,476.099,353.968z M242.899,397.768c-14.8,0-27.1-12.3-27.1-27.1s12.3-27.1,27.1-27.1\
+          c14.8,0,27.1,12.3,26.5,27.8C270.099,385.468,257.099,397.768,242.899,397.768z M267.599,222.568c-1.2,21-2.5,41.9-3.7,62.9\
+          c-0.6,6.8-0.6,13-0.6,19.7c-0.6,11.1-9.3,19.7-20.4,19.7s-19.7-8-20.4-19.1c-1.8-32.7-3.7-64.8-5.5-97.5\
+          c-0.6-8.6-1.2-17.3-1.9-25.9c0-14.2,8-25.9,21-29.6c13-3.1,25.9,3.1,31.5,15.4c1.9,4.3,2.5,8.6,2.5,13.6\
+          C269.499,195.468,268.199,209.068,267.599,222.568z')
+        | Удалить книгу
+
+.modal(id="book-excert")
+  .modal__dialog
+    button( (click) = "closeModal()" ).modal__close &#10006;
+    .book-editor
+      .book-editor__excert-edit
+        .book-editor__label Выдержка из книги
+        h2.book-editor__title Футбол. Чемпионаты мира. 1930-2014
+        .book-editor__content
+          p wyswyg
+
+.modal(id="book-spread")
+  .modal__dialog
+    button( (click) = "closeModal()" ).modal__close &#10006;
+    .book-editor
+      .book-editor__excert-edit
+        .book-editor__label Выдержка из книги
+        h2.book-editor__title Футбол. Чемпионаты мира. 1930-2014
+        .book-spread-editor
+          ul.book-spread-editor__list
+            li.book-spread-editor__item
+              .book-spread-editor__item-wrap
+                img(src="img/content/book/book-page-1.jpg", alt="")
+                img(src="img/content/book/book-page-2.jpg", alt="")
+              .book-spread-editor__item-pos
+                .input-text.input-text--xs
+                  input(type="text" size="3" value="1")
+            li.book-spread-editor__item
+              .book-spread-editor__item-wrap
+                img(src="img/content/book/book-page-1.jpg", alt="")
+                button((click) = "uploadSpread()")
+                  i.icon-upload
+                  span Добавить разворот
+              .book-spread-editor__item-pos
+                .input-text.input-text--xs
+                  input(type="text" size="3" value="1")
+    .modal__bottom
+      button.btn( (click)="fuckTheSystem()") Сохранить
+
+.modal(id="addition-form-category")
+  .modal__dialog
+    button( (click) = "closeModal()" ).modal__close &#10006;
+    .addition-form
+      ul.addition-form__list
+        li.addition-form__item
+          input(type="text")
+          button((click) type="button")
+            i.icon-cart
+        li.addition-form__item
+          input(type="text")
+          button((click) type="button")
+            i.icon-cart
+        li.addition-form__item
+          input(type="text")
+          button((click) type="button")
+            i.icon-cart
+        li.addition-form__item
+          input(type="text")
+          button((click) type="button")
+            i.icon-cart
+      button.addition-form__btn((click)="addCategory()" type="button") Добавить книгу
+      
+    .modal__bottom
+      button.btn( (click)="fuckTheSystem()") Сохранить
+
+.modal(id="addition-form-book")
+  .modal__dialog
+    button( (click) = "closeModal()" ).modal__close &#10006;
+    .addition-form
+      ul.addition-form__list
+        li.addition-form__item
+          input(type="text")
+          button((click) type="button")
+            i.icon-cart
+        li.addition-form__item
+          input(type="text")
+          button((click) type="button")
+            i.icon-cart
+        li.addition-form__item
+          input(type="text")
+          button((click) type="button")
+            i.icon-cart
+        li.addition-form__item
+          input(type="text")
+          button((click) type="button")
+            i.icon-cart
+      button.addition-form__btn((click)="addCategory()" type="button") Добавить категорию
+      
+    .modal__bottom
+      button.btn( (click)="fuckTheSystem()") Сохранить

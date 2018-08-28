@@ -1,0 +1,36 @@
+.create {
+  position: relative;
+  background-color: #f7f9f9;  
+  .container {  
+  }
+  &__inner {
+    padding-top: 52px;
+    padding-bottom: 78px;
+    @media @small {
+      padding-top: 34px;
+      padding-bottom: 34px;
+    }
+    border-bottom: 1px solid #be1823;    
+  }
+  &__top {
+    margin-bottom: 23px;
+    .heading__right {
+      @media (max-width: 650px) {
+        display: none;
+      }      
+    }
+  }
+  &__item {
+    p {
+      line-height: 32px;
+      letter-spacing: 0.3px;
+    }
+  }
+
+  &__bottom {
+    display: none;
+    @media (max-width: 650px) {
+      display: block;
+    }
+  }
+}

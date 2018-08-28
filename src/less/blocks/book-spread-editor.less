@@ -1,0 +1,61 @@
+.book-spread-editor {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-left: -9px;
+    margin-right: -9px;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    width: 262px;
+    margin: 9px;
+    margin-bottom: 34px;
+    &-wrap {
+      margin-bottom: 12px;
+      font-size: 0;
+      background-color: #ebebeb;
+      border: 1px solid #cdcdcd;
+      img {
+        font-size: 0;
+        width: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        box-sizing: border-box;
+        &:first-child {
+          border-right: 1px solid #cdcdcd;
+        }
+      }
+      button {
+        cursor: pointer;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        width: 50%;
+        margin: 0;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        font-weight: 300;
+        background: transparent;
+        .icon-upload {
+          margin-bottom: 10px;
+        }
+        &:first-child {
+          border-right: 1px solid #cdcdcd;
+        }
+      }
+    } //wrap
+    &-pos {
+      margin-top: auto;
+      text-align: center;
+      input {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+  }
+} //book-spread

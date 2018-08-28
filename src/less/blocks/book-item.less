@@ -1,0 +1,43 @@
+.book-item { 
+  position: relative; 
+  &__cover {
+    margin-bottom: 21px;
+    text-align: center;
+    img {
+      box-shadow: 0 15px 15px 0 rgba(0, 0, 0, .2), 0 0 10px 0 rgba(0, 0, 0, .2);
+      vertical-align: bottom;
+    }
+  }//cover
+
+  &--no-published > * {
+    opacity: 0.25;
+  }
+
+  &__status {
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: -2rem;    
+  }
+
+  &__title {
+    padding-left: 2px;
+    font-size: 22px;
+    line-height: 1.48;
+    font-family: @bsk;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: 0.299px;
+  }//title
+
+  &__subtitle {
+    font-size: 13px;
+    line-height: 1.84;
+    font-weight: normal;
+    letter-spacing: 0.299px;
+    margin-top: 12px;
+    @media @small {
+      margin-top: 9px;
+    }
+  }//subtitle
+}

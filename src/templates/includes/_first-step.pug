@@ -1,0 +1,28 @@
+section.first-step(id="create")
+  .container
+    .first-step__inner
+      header.first-step__header
+        .heading
+          h2.heading__title Первый шаг
+          .heading__subtitle к вашей книге
+      .first-step__content.row
+        .first-step__item.col-sm-6.col-md-6
+          .first-step__item-text
+            p Оставьте свой номер телефона, мы перезвоним<br> и договоримся о встрече
+          form.form-callback
+            .form-callback__field
+              label(for="name") Как вас зовут
+              input(type="text" name="name" id="name" placeholder="Имя Фамилия" required)
+            .form-callback__field
+              label(for="tel") Ваш телефон
+              input(type="tel" name="tel" id="tel" placeholder="+7 ___ __ __" required)
+            .form-callback__submit              
+              input.btn.btn--block(type="submit" value="заказать звонок")
+
+        .first-step__item.col-sm-6.col-md-6
+          .first-step__item-text
+            p Или позвоните Наталье Логутовой,<br> она ответит на любые вопросы:
+          .first-step__contact-link
+            .first-step__contact-link-img
+              img(src="img/content/user-photo.jpg")
+            a(href="tel:+79031442032") +7 903 144-20-32

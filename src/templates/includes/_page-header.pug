@@ -1,0 +1,84 @@
+header(class={"header header--v2": index,
+              "header header--inner-page header--border-bottom header--v2": catalog,
+              "header header--inner-page": book})
+  .container
+    .header__inner
+      a.header__logo.logo(href="/")
+        img.logo__main(src="img/static/logo-inner-page.svg", alt="HSE ART BOOKS")
+        .logo__mobile
+          img.logo__first(src="img/static/vLOGONormal.svg", alt="Agey Tomesh Wam")
+          .logo-textual
+            div издательство школы&nbsp;дизайна<br>ниу вшэ<br>при&nbsp;участити
+              img(src="./img/static/ag.svg", alt="")              
+
+      .header__nav
+        nav.nav
+          ul.nav__list
+            li.nav__item
+              a(href="/" title="Каталог") каталог
+            li.nav__item
+              a(href="/" title="Как мы работаем") как мы работаем
+
+      .header__right
+        .header__right-item
+          .header__social
+            .social
+              ul.social__list
+                li.social__item
+                  a(href="#") Faceebok
+                    if error
+                      +icon('fb-white', 30)
+                    else
+                      +icon('fb', 30)
+                li.social__item
+                  a(href="#") Vkontakte
+                    if error
+                      +icon('vk-white', 30)
+                    else
+                      +icon('vk', 30)
+                li.social__item
+                  a(href="#") Instagram
+                    if error
+                      +icon('inst-white', 30)
+                    else
+                      +icon('inst', 30)
+        .header__right-item
+          .header__search 
+            .search
+              input.search__field
+              button.search__btn.btn.btn--search(type="button")
+                if error
+                  +icon('search-white', 17.5)
+                else
+                  +icon('search', 17.5)
+          //- if index
+          //-   .header__img
+          //-     img(src="img/static/vert-logo.svg"
+          //-         width="67"
+          //-         alt="HSE ART BOOKS")
+          //- else if error
+          //-   .header__img
+          //-     img(src="img/static/vert-logo-white.svg"
+          //-         width="67"
+          //-         alt="HSE ART BOOKS")
+          //- else
+          //-   .header__img.header__img--short
+          //-     img(src="img/static/logo-2.svg"
+          //-         width="223"
+          //-         alt="HSE ART BOOKS")
+ 
+      //- if index || error
+      .header__contacts.contacts
+        address.contacts
+          a.contacts__link(href="javascript:void(0)") москва,<br> м. пионерская, 12
+          a.contacts__link(href="tel:+79031442032") +&nbsp;7&nbsp;(495)&nbsp;913&nbsp;62&nbsp;95
+          a.contacts__link(href="mailto:deslab@hse.ru") deslab@hse.ru
+    .header__advanced.row
+      .logo-textual.col-sm-2
+        div издательство школы&nbsp;дизайна<br>ниу вшэ<br>при&nbsp;участити
+        img(src="./img/static/ag.svg", alt="")
+      .col-sm-3
+        address.contacts
+          a.contacts__link(href="javascript:void(0)") москва,<br> м. пионерская, 12
+          a.contacts__link(href="tel:+79031442032") +&nbsp;7&nbsp;(495)&nbsp;913&nbsp;62&nbsp;95
+          a.contacts__link(href="mailto:deslab@hse.ru") deslab@hse.ru
